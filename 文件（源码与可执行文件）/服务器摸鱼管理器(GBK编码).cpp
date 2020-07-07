@@ -33,12 +33,12 @@ int main()
     cout << "按下任意按键开始服务器备份\n";
     cin.get();
     string m;
-    m = "save hold";PrintInBDS(window,m);
-    m = "save query";PrintInBDS(window,m);
-    m = "save resume";PrintInBDS(window,m);
-    cout << "服务器备份....";
+    m = "save hold";PrintInBDS(window,m);Sleep(1000);
+    m = "save query";PrintInBDS(window,m);Sleep(1000);
+    m = "save resume";PrintInBDS(window,m);Sleep(1000);
+    cout << "\n服务器备份....";
     Sleep(2000);
-    cout << "备份完成\n";
+    cout << "\n备份完成\n";
     cout << "请选择要执行的操作\n" << "“1”->监听模式\n“2”->公告模式\n“3”->设置模式\n";
     int link;
     do
@@ -126,11 +126,13 @@ int PrintInBDS(HWND window,string command /*这个不想把window变量加进来啊有大佬指
 {
     for (int i = 0; i < command.size(); i++)
     {
-        char *s;
-        *s = command[i];
-        SendMessage(window,WM_CHAR,WPARAM(*s),0);
-        delete s;
+        char s;
+        s = command[i];
+        SendMessage(window,WM_CHAR,WPARAM(s),0);
+        cout << "#";
     }
+    SendMessage(window,WM_CHAR,WPARAM(),0);
+    cout << "发送成功";
     return 0;
 }
 
