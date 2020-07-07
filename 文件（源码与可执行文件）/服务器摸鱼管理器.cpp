@@ -15,51 +15,51 @@ int PrintInBDS(HWND window,string command);
 int main()
 {
 
-    cout << "»¶Ó­£¡\nÕâÊÇLanMengChaµÄ·şÎñÆ÷¸¯ÖñÃşÓã¹¤¾ß\n";
+    cout << "æ¬¢è¿ï¼\nè¿™æ˜¯LanMengChaçš„æœåŠ¡å™¨è…ç«¹æ‘¸é±¼å·¥å…·\n";
     Sleep(100);
-    cout << "¿ªÊ¼Æ¥Åä´°¿Ú¾ä±ú\n";
+    cout << "å¼€å§‹åŒ¹é…çª—å£å¥æŸ„\n";
 
     HWND window = FindPid(CheckModule("bedrock_server.exe"));
-    //´´½¨´°¿Ú¾ä±ú²¢Ñ°ÕÒ£¬ÎÒÓÃµÄÊÇÎÒµÄ·şÎñ¶ËµÄ´°¿ÚÃû£¬ÒÆÖ²ºóÇëÎñ±ØÖØĞÂÊäÈë£¡£¡£¡
-    cout << "´°¿ÚÆ¥Åä·µ»ØÖµ£º" << window;
+    //åˆ›å»ºçª—å£å¥æŸ„å¹¶å¯»æ‰¾ï¼Œæˆ‘ç”¨çš„æ˜¯æˆ‘çš„æœåŠ¡ç«¯çš„çª—å£åï¼Œç§»æ¤åè¯·åŠ¡å¿…é‡æ–°è¾“å…¥ï¼ï¼ï¼
+    cout << "çª—å£åŒ¹é…è¿”å›å€¼ï¼š" << window;
     if (window == 0)
     {
-        cout << "\nÆ¥ÅäÊ§°Ü\n";
+        cout << "\nåŒ¹é…å¤±è´¥\n";
     }
     else
     {
-        cout << "\nÆ¥Åä³É¹¦\n";
+        cout << "\nåŒ¹é…æˆåŠŸ\n";
     }
-    cout << "°´ÏÂÈÎÒâ°´¼ü¿ªÊ¼·şÎñÆ÷±¸·İ\n";
+    cout << "æŒ‰ä¸‹ä»»æ„æŒ‰é”®å¼€å§‹æœåŠ¡å™¨å¤‡ä»½\n";
     cin.get();
     string m;
     m = "save hold";PrintInBDS(window,m);Sleep(1000);
     m = "save query";PrintInBDS(window,m);Sleep(1000);
     m = "save resume";PrintInBDS(window,m);Sleep(1000);
-    cout << "\n·şÎñÆ÷±¸·İ....";
+    cout << "\næœåŠ¡å™¨å¤‡ä»½....";
     Sleep(2000);
-    cout << "\n±¸·İÍê³É\n";
-    cout << "ÇëÑ¡ÔñÒªÖ´ĞĞµÄ²Ù×÷\n" << "¡°1¡±->¼àÌıÄ£Ê½\n¡°2¡±->¹«¸æÄ£Ê½\n¡°3¡±->ÉèÖÃÄ£Ê½\n";
+    cout << "\nå¤‡ä»½å®Œæˆ\n";
+    cout << "è¯·é€‰æ‹©è¦æ‰§è¡Œçš„æ“ä½œ\n" << "â€œ1â€->ç›‘å¬æ¨¡å¼\nâ€œ2â€->å…¬å‘Šæ¨¡å¼\nâ€œ3â€->è®¾ç½®æ¨¡å¼\n";
     int link;
     do
     {
-        cout << "<server>_ÊäÈëÃüÁî:";
+        cout << "<server>_è¾“å…¥å‘½ä»¤:";
         cin >> link;
         if (link == 1)
         {
-            /*º¯ÊıÔÚÕâĞ´*/
+            /*å‡½æ•°åœ¨è¿™å†™*/
         }
         else if (link == 2)
         {
-            /*º¯ÊıÔÚÕâĞ´*/
+            /*å‡½æ•°åœ¨è¿™å†™*/
         }
         else if (link == 3)
         {
-            /*º¯ÊıÔÚÕâĞ´ */
+            /*å‡½æ•°åœ¨è¿™å†™ */
         }
         else
         {
-            cout << "ÃüÁîÊäÈë´íÎó£¬ÇëÖØÊÔ¡£";
+            cout << "å‘½ä»¤è¾“å…¥é”™è¯¯ï¼Œè¯·é‡è¯•ã€‚";
         }
         
 
@@ -72,15 +72,15 @@ int main()
 
 
     } while (window != 0);
-    cout << "³ÌĞòÔËĞĞ½áÊø£¬Çëµã»÷ÈÎÒâ°´¼üÍË³ö\n";
+    cout << "ç¨‹åºè¿è¡Œç»“æŸï¼Œè¯·ç‚¹å‡»ä»»æ„æŒ‰é”®é€€å‡º\n";
     cin.get();
-    cout << "Ğ¡QºÃ¿É°®£¡£¡£¡£¡";
+    cout << "å°Qå¥½å¯çˆ±ï¼ï¼ï¼ï¼";
     return 0;
 }
 
 
 
-//ÏÂÃæÊÇÂ¥ÉÏÓÃµ½µÄº¯Êı
+//ä¸‹é¢æ˜¯æ¥¼ä¸Šç”¨åˆ°çš„å‡½æ•°
 
 
 DWORD CheckModule(char* ProcessName)
@@ -122,7 +122,7 @@ return(NULL);
 
 }
 
-int PrintInBDS(HWND window,string command /*Õâ¸ö²»Ïë°Ñwindow±äÁ¿¼Ó½øÀ´°¡ÓĞ´óÀĞÖ¸µãÒ»¶şÂğ*/)
+int PrintInBDS(HWND window,string command /*è¿™ä¸ªä¸æƒ³æŠŠwindowå˜é‡åŠ è¿›æ¥å•Šæœ‰å¤§ä½¬æŒ‡ç‚¹ä¸€äºŒå—*/)
 {
     for (int i = 0; i < command.size(); i++)
     {
@@ -133,7 +133,7 @@ int PrintInBDS(HWND window,string command /*Õâ¸ö²»Ïë°Ñwindow±äÁ¿¼Ó½øÀ´°¡ÓĞ´óÀĞÖ¸
     }
     cout << ">";
     SendMessage(window,WM_CHAR,WPARAM("\r"),0);
-    cout << "·¢ËÍ³É¹¦";
+    cout << "å‘é€æˆåŠŸ";
     return 0;
 }
 
