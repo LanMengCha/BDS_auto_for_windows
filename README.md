@@ -1,1 +1,3 @@
 BDS_auto_for_windows
+这是一个帮助用windows版BDS服务器开服的腐竹的工具
+注意事项：请使用GBK中文编码重新打开一次再便宜a
